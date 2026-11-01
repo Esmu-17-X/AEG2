@@ -20,4 +20,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run your script
-        run: python androRAT.py
+        run: python androRAT.py --build -i 127.0.0.1 -p 8000 -o test.apk
