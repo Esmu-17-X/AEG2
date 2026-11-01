@@ -4,20 +4,20 @@ on: [push]
 
 jobs:
   run-code:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.7 (or greater)
+      - name: Set up Python 3.7
         uses: actions/setup-python@v5
         with:
-          python-version: '3.7'  # Change to '3.8', '3.9', etc., if needed
+          python-version: '3.7'
 
       - name: Install dependencies (optional)
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Uncomment if you have a requirements file
+          pip install -r requirements.txt
 
       - name: Run your script
-        run: python your_script_name.py  # Replace with your actual file name
+        run: python androRAT.py
